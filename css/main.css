@@ -1,0 +1,174 @@
+
+@import url(https://fonts.google.com/?query=ya&selection.family=Yanone+Kaffeesatz);
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: rgb(238, 243, 170);
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+.banner img {
+    width: 100%;
+    height: 30rem;
+}
+/*estilos del header*/
+.header {
+    height: 60px;
+}
+.header .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+.logo, .icon-menu {
+    margin:5px;
+}
+.icon-menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: #FBA919;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;/*centrado de manera vertical*/
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+.nav {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.4s;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-link {
+    display: block;
+    padding: 15px;
+    background: #FBA919;
+    text-decoration: none;
+    color: #fff;
+}
+.menu-link:hover, .select{
+    background: #fff;
+    color: #FBA919;
+}
+.mostrar {
+    left: 0;
+}
+
+/*---------------------stylos del  banner----------------*/
+.banner {
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 20px;
+}
+.banner-text {
+    display: none;
+}
+.banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+/*-----------------------Estilos de info--------------*/
+
+.info-columna {
+    background: #FBA919;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+    
+}
+/*----------------------Estilos de cursos--------------*/
+
+.section-titulo {
+    text-align: center;
+    font-size: 40px;
+    color: #FBA919;
+}
+.cursos-columna {
+    position: relative;
+    margin-bottom: 30px;
+
+}
+.cursos-descripcion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:#FBA919;
+    background: rgba(0, 0, 0, 0.5);
+    width: 60%;
+    height: 100%;
+    padding: 5px;
+
+}
+.cursos-titulo {
+    font-size: 30px;
+    margin: 5px 0;
+    
+}
+footer {
+    background: rgb(6, 6, 134);
+    color: #fff;
+    padding: 2%;
+}
+/*------------------------Estilos responsive------------------*/
+
+@media(min-width:480px) {
+    .logo {
+        font-size: 40px;
+
+    }
+    .banner-titulo {
+        font-size: 30px;
+        margin:5px 0;
+    }
+    .banner-text {
+        display: block;
+        font-size: 18px;
+        margin: 7px 0; 
+    }
+    .info, .cursos {
+        display: flex;
+        
+        justify-content: space-between;/*espacio entre los costados*/
+    }
+
+    .info-columna {
+        width: 30%;
+
+    }
+    .info-titulo {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .section-titulo{
+        width: 100%;
+    }
+    .cursos {
+        margin-top: 0;
+        flex-wrap: wrap;/*para que no pase de su contenedor*/
+    }
+    .cursos-columna {
+        width: 49%;
+    }
+}
+
